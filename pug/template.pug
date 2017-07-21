@@ -1,0 +1,25 @@
+mixin template(lang)
+  html
+    - const en = lang === 'en'
+    head
+      title=title
+      meta(name='description', content=description)
+      meta(name='author', content=author)
+      meta(property='og:title', content=title)
+      meta(property='og:image', content='/screenshot.png')
+      meta(property='og:description', content=description)
+      meta(http-equiv='x-ua-compatible', content='ie=edge')
+      meta(name='viewport' content='width=device-width, user-scalable=no')
+      link(rel='stylesheet', href='/stylesheet.css')
+      script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+      script(type='text/javascript', src='/script.js')
+      script(type='text/javascript').
+        lang = '#{lang}';
+    body
+      include ./pages/main
+      include ./pages/presentation
+      include ./pages/activites
+      include ./pages/partenaires
+      include ./pages/nos-ambitions
+      include ./pages/contact
+      include ./menu

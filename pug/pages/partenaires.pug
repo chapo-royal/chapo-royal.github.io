@@ -1,0 +1,27 @@
+.page.page-frame#partenaires
+  .frame
+    input#partner-china(type='radio', name='partners', checked)
+    input#partner-japan(type='radio', name='partners')
+    input#partner-korea(type='radio', name='partners')
+    .container-nations
+      label.nation.china(for='partner-china') CHINE
+      label.nation.japan(for='partner-japan') JAPON
+      label.nation.korea(for='partner-korea') COREE<br>DU SUD
+    .container-maps
+      .wrapper-map.china
+        include ../../img/partenaires/maps/china.svg
+      .wrapper-map.japan
+        include ../../img/partenaires/maps/japan.svg
+      .wrapper-map.korea
+        include ../../img/partenaires/maps/korea.svg
+    .description
+    a.wrapper-logo(href='#main')
+      img.image-logo-square(src='/img/image-logo-square.svg')
+    a.wrapper-menu(href='#')
+      img.icon-menu(src='/img/frame/icon-menu.svg')
+  .popup
+    .deco-popup-arrow
+    .container-image
+      img#image-city(src='/img/partenaires/photos/seoul.jpg')
+      #label-city
+  .label-address
