@@ -32,7 +32,8 @@ const banner = [
 // Build Directories
 const cssDir = path.join(__dirname, 'css', '**', '*.scss');
 const jsDir = path.join(__dirname, 'js', '**', '*.js');
-const pugDir = path.join(__dirname, 'pug', '**', '*.pug');
+const pugWatchDir = path.join(__dirname, 'pug', '**', '*.pug');
+const pugSourceDir = path.join(__dirname, 'pug', '**', 'index.pug');
 
 function onError(err) {
   console.log(err);
@@ -66,9 +67,9 @@ gulp.task('build-js', () => {
 
 // PUG
 gulp.task('build-pug', () => {
-  gutil.log('\n\nBuild pug Paths: \n', pugDir, '\n\n');
+  gutil.log('\n\nBuild pug Paths: \n', pugSourceDir, '\n\n');
   const locals = {};
-  return gulp.src(pugDir)
+  return gulp.src(pugSourceDir)
     .on('error', onError)
     .pipe(pug({ locals }))
     .pipe(gulp.dest(outputPaths.pug))
@@ -90,7 +91,7 @@ gulp.task('connect', function () {
 gulp.task('watch', function () {
   gulp.watch(cssDir, ['build-css']);
   gulp.watch(jsDir, ['build-js']);
-  gulp.watch(pugDir, ['build-pug']);
+  gulp.watch(pugWatchDir, ['build-pug']);
 });
 
 // Default
