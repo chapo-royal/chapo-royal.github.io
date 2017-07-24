@@ -943,19 +943,35 @@ img, label {
     width: 342px;
     height: 100%;
     border-left: 1px solid #979797;
-    padding: 2.5rem 1.6rem;
+    padding: 2.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: $color-theme url(/img/menu/background.svg) no-repeat bottom;
     background-size: 100% auto;
     box-sizing: border-box;
+    color: white;
 
-    .wrapper-close {
-      align-self: flex-end;
+    .container-top {
+      align-self: stretch;
+      display: flex;
+      justify-content: space-between;
 
-      .icon-close {
-        width: 5.7rem;
+      .container-langs {
+        display: flex;
+
+        .lang {
+          margin-right: .8rem;
+          &.active {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .wrapper-close {
+        .icon-close {
+          width: 5.7rem;
+        }
       }
     }
 
@@ -967,7 +983,6 @@ img, label {
       justify-content: center;
 
       a {
-        color: white;
         font-size: $font-size-large;
         margin-bottom: 9.0vh;
 

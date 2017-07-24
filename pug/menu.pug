@@ -1,10 +1,19 @@
 #menu
   .container-content
-    a.wrapper-close(href='#')
-      img.icon-close(src='/img/menu/icon-close.svg')
+    .container-top
+      .container-langs
+        a.lang(href='/', class=fr && 'active') FR.
+        a.lang(href='/en/', class=!fr && 'active') EN.
+      a.wrapper-close(href='#')
+        img.icon-close(src='/img/menu/icon-close.svg')
     .list
-      a(href='#presentation') PRESENTATION
-      a(href='#activites') ACTIVITES
-      a(href='#partenaires') PARTENAIRES
-      a(href='#nos-ambitions') NOS AMBITIONS
-      a(href='#contact') CONTACT
+      a(href='#presentation')
+        = fr ? 'PRESENTATION' : 'PRESENTATION'
+      a(href='#activites')
+        = fr ? 'ACTIVITES' : 'ACTIVITIES'
+      a(href='#partenaires')
+        = fr ? 'PARTENAIRES' : 'PARTNERS'
+      a(href='#nos-ambitions')
+        = fr ? 'NOS AMBITIONS' : 'OUR AMBITIONS'
+      a(href='#contact')
+        = fr ? 'CONTACT US' : 'CONTACT US'
