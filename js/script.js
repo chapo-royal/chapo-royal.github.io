@@ -10,13 +10,21 @@ $(document).ready(() => {
   handleHashChange();
   $(window).on('hashchange', handleHashChange);
 
+  const onResize = () => {
+    const { clientWidth } = document.body;
+    const desktop = clientWidth > 960;
+    const mobile = !desktop;
+    $('body').toggleClass('desktop', desktop);
+    $('body').toggleClass('mobile', mobile);
+  };
+  onResize();
+  window.onresize = onResize;
+
+
   $('.wrapper-menu').click(() => {
-    $('#menu').addClass('open');
+    $('.wrapper-menu, #menu').toggleClass('open');
   });
 
-  $('.wrapper-close').click(() => {
-    $('#menu').removeClass('open');
-  });
 
   let letter_index = 0;
   window.setInterval(() => {
@@ -26,6 +34,7 @@ $(document).ready(() => {
     $letter.removeClass('active');
     $letter.eq(letter_index).addClass('active');
   }, 5000);
+
 
   const $popup = $('#partenaires .popup');
   $('.wrapper-map svg .land').mousemove(function (e) {

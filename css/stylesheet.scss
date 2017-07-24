@@ -809,6 +809,7 @@ img, label {
 
         .container-boxes {
           display: flex;
+          justify-content: center;
 
           .box {
             position: relative;
@@ -819,6 +820,8 @@ img, label {
             border: 3px solid white;
             padding: 5rem 2rem;
             margin-right: .5rem;
+            min-width: 20rem;
+            max-width: 30rem;
 
             .label-personalize {
               position: absolute;
@@ -932,7 +935,7 @@ img, label {
   visibility: hidden;
   max-width: 0;
   transition: visibility 1s, max-width 1s;
-  z-index: 2;
+  z-index: 3;
 
   &.open {
     visibility: visible;
@@ -968,7 +971,7 @@ img, label {
         }
       }
 
-      .wrapper-close {
+      .wrapper-menu {
         .icon-close {
           width: 5.7rem;
         }
@@ -988,6 +991,109 @@ img, label {
 
         &:last-child {
           margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.desktop .mobile,
+.mobile .desktop {
+  display: none !important;
+}
+
+.mobile {
+  .page {
+    &#main {
+      background-position: left center;
+      background-size: auto 90vh;
+    }
+  }
+
+  .nav-top {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 20vw;
+    background: url(/img/mobile/background-top.svg) top;
+    background-size: 100% auto;
+
+    .wrapper-logo {
+      position: absolute;
+      bottom: 2vw;
+      left: 4vw;
+
+      .image-logo-mobile {
+        width: 45.9vw;
+      }
+    }
+
+    .wrapper-menu {
+      position: absolute;
+      top: 1vw;
+      right: 12.5vw;
+
+      .icon-menu {
+        width: 12.3vw;
+        height: 12.3vw;
+        background: url(/img/menu/icon-menu.svg) no-repeat center;
+        background-size: contain;
+      }
+
+      &.open {
+        .icon-menu {
+          background-image: url(/img/menu/icon-close.svg);
+        }
+      }
+    }
+  }
+
+  .nav-bottom {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 30.9vw;
+    background: url(/img/mobile/background-bottom.svg) bottom;
+    background-size: 100% auto;
+
+    .wrapper-contact {
+      position: absolute;
+      bottom: 2.5vw;
+      left: 2vw;
+
+      .icon-contact {
+        width: 33vw;
+      }
+    }
+  }
+
+  #menu {
+    top: 31vw;
+    bottom: 31vw;
+    max-width: none;
+    opacity: 0;
+    transition: visibility 1s, opacity 1s;
+
+    &.open {
+      max-width: none;
+      opacity: 1;
+    }
+
+    .container-content {
+      width: 100vw;
+      border-left: none;
+
+      .list {
+        a {
+          margin-bottom: 6.5vh;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
       }
     }
