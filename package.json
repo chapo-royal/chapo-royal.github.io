@@ -1,7 +1,7 @@
 {
   "name": "chapo-royal",
   "version": "1.0.0",
-  "description": "",
+  "description": "the official website of CHAPOROYAL",
   "scripts": {
     "start": "gulp",
     "build": "gulp build"
@@ -10,7 +10,6 @@
     "type": "git",
     "url": "https://github.com/chapo-royal/chapo-royal.github.io"
   },
-  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/chapo-royal/chapo-royal.github.io/issues"

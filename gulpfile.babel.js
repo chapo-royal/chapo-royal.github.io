@@ -22,7 +22,6 @@ const banner = [
   '/**',
   ' * <%= pkg.name %> - <%= pkg.description %>',
   ' * @version v<%= pkg.version %>',
-  ' * @author <%= pkg.author %>',
   ' * @link <%= pkg.homepage %>',
   ' * @license <%= pkg.license %>',
   ' */',
@@ -68,7 +67,27 @@ gulp.task('build-js', () => {
 // PUG
 gulp.task('build-pug', () => {
   gutil.log('\n\nBuild pug Paths: \n', pugSourceDir, '\n\n');
-  const locals = {};
+  const locals = {
+    title: 'CHAPOROYAL',
+    description: pkg.description,
+    payments: [
+      {
+        name: 'PME & ARTISANS',
+        price: 600,
+        hosted_button_id: 'FQ4MM3T3XHT68'
+      },
+      {
+        name: 'MEMBRE INDIVIDUEL',
+        price: 980,
+        hosted_button_id: 'U7ZAZCB6K6R5N'
+      },
+      {
+        name: 'ENTREPRISE',
+        price: 2400,
+        hosted_button_id: 'VTL5LDTLCXMAW'
+      }
+    ]
+  };
   return gulp.src(pugSourceDir)
     .on('error', onError)
     .pipe(pug({ locals }))

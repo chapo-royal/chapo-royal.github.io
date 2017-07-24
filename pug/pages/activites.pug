@@ -1,23 +1,23 @@
 .page.page-frame#activites
   .frame
     .panel-explanation
-      input#activity-1(type='radio', name='activites', checked)
-      .group
-        .title Exportation made in France
-        .content
-          | Les produits que nous sélectionnons ont pour vocation d’être présentés au monde entier, et surtout en Asie. En effet, les marchés émergents ne cessent de croître et les consommateurs sont de plus en plus attirés par les produits atypiques.
-          | Nous ommes en contact constant avec des acteurs en Asie, notre zone de chalandise, afin de développer notre stratégie BtoB.
-      input#activity-2(type='radio', name='activites')
-      .group
-        .title Études de marchés « sur mesure »
-        .content
-          | Nos études de marché sont axées sur la France et ses régions ; et ce, afin de nous assurer de la réelle fabrication française des produits. Notre objectif étant d’avoir une relation durable avec nos partenaires français et nos partenaires étrangers.
-      .labels
-        label(for='activity-1') Exportation made in France
-        label(for='activity-2') Études de marchés « sur mesure »
+      .container-content
+        input#activity-1(type='radio', name='activites', checked)
+        .group
+          .title Exportation made in France
+          .content
+            | Les produits que nous sélectionnons ont pour vocation d’être présentés au monde entier, et surtout en Asie. En effet, les marchés émergents ne cessent de croître et les consommateurs sont de plus en plus attirés par les produits atypiques.
+            | Nous ommes en contact constant avec des acteurs en Asie, notre zone de chalandise, afin de développer notre stratégie BtoB.
+        input#activity-2(type='radio', name='activites')
+        .group
+          .title Études de marchés « sur mesure »
+          .content
+            | Nos études de marché sont axées sur la France et ses régions ; et ce, afin de nous assurer de la réelle fabrication française des produits. Notre objectif étant d’avoir une relation durable avec nos partenaires français et nos partenaires étrangers.
+        .labels
+          label(for='activity-1') Exportation made in France
+          label(for='activity-2') Études de marchés « sur mesure »
     .panel-empty
-    a.wrapper-logo(href='#main')
-      img.image-logo-square(src='/img/image-logo-square.svg')
-    a.wrapper-menu(href='#')
-      img.icon-menu(src='/img/frame/icon-menu.svg')
+    include ../overlays/label-partenariat
+    include ../overlays/image-logo
+    include ../overlays/icon-menu
   include ../labels

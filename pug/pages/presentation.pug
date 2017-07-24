@@ -10,8 +10,6 @@
       .letter.active(style='background-image: url(/img/presentation/letters/1.jpg)')
       .letter(style='background-image: url(/img/presentation/letters/2.jpg)')
       .letter(style='background-image: url(/img/presentation/letters/3.jpg)')
-    a.wrapper-logo(href='#main')
-      img.image-logo-square(src='/img/image-logo-square.svg')
-    a.wrapper-menu(href='#')
-      img.icon-menu(src='/img/frame/icon-menu.svg')
+    include ../overlays/image-logo
+    include ../overlays/icon-menu
   include ../labels

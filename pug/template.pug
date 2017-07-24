@@ -5,7 +5,6 @@ mixin template(lang)
       title=title
       meta(charset='utf-8')
       meta(name='description', content=description)
-      meta(name='author', content=author)
       meta(property='og:title', content=title)
       meta(property='og:image', content='/screenshot.png')
       meta(property='og:description', content=description)
@@ -23,4 +22,6 @@ mixin template(lang)
       include ./pages/partenaires
       include ./pages/nos-ambitions
       include ./pages/contact
+      include ./pages/paiement
+      include ./pages/legales
       include ./menu
