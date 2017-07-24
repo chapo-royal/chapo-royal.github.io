@@ -66,10 +66,6 @@ img, label {
   display: block;
 }
 
-.image-logo-square {
-  width: 101px;
-}
-
 .page {
   position: absolute;
   width: 100%;
@@ -85,16 +81,21 @@ img, label {
     z-index: 1;
   }
 
-  .label-address {
+  @mixin label {
     position: absolute;
     bottom: 0;
-    right: 0;
     padding: .2em 3em;
     font-weight: lighter;
+  }
 
-    &:after {
-      content: '3 cours Charlemagne 69002 Lyon';
-    }
+  .label-legal {
+    @include label;
+    left: 0;
+  }
+
+  .label-copyright {
+    @include label;
+    right: 0;
   }
 
   &#main {
@@ -115,8 +116,8 @@ img, label {
       position: absolute;
       top: 0;
       right: 0;
-      width: 69.7vw;
-      height: 19.7vw;
+      width: 40vw;
+      height: 11.3vw;
       margin-top: -0.1vw;
       background-image: url(/img/main/container-menu.svg);
       background-size: 100% 100%;
@@ -124,10 +125,10 @@ img, label {
       .wrapper-menu {
         position: absolute;
         top: 1.9vw;
-        right: 14.0vw;
+        right: 8.0vw;
 
         .icon-menu {
-          width: 8.6vw;
+          width: 4.6vw;
         }
       }
     }
@@ -159,6 +160,10 @@ img, label {
       left: 9.7vw;
       width: 16.5vw;
     }
+
+    .label-legal {
+      display: none;
+    }
   }
 
   &.page-frame {
@@ -177,6 +182,7 @@ img, label {
         margin: 15px 30px;
 
         .image-logo-square {
+          width: 80px;
         }
       }
 
@@ -194,7 +200,8 @@ img, label {
       }
     }
 
-    .label-address {
+    .label-legal,
+    .label-copyright {
       color: #C9C8C9;
     }
 
@@ -264,8 +271,8 @@ img, label {
     &#activites {
       background-image: url(/img/activites/background.svg);
       background-repeat: no-repeat;
-      background-position: bottom -20vw left -20vw;
-      background-size: 140vw auto;
+      background-position: bottom -28vw left -10vw;
+      background-size: 120vw auto;
 
       .frame {
         display: flex;
@@ -275,7 +282,7 @@ img, label {
         $padding: 3em;
 
         .panel-explanation {
-          flex-basis: 50%;
+          flex-basis: 66.6%;
           display: flex;
           flex-direction: column;
           align-items: flex-start;
@@ -353,7 +360,7 @@ img, label {
         }
 
         .panel-empty {
-          flex-basis: 50%;
+          flex-basis: 33.3%;
         }
       }
     }
@@ -771,29 +778,27 @@ img, label {
 
     .wrapper-close {
       align-self: flex-end;
-      margin-bottom: 3.4vh;
 
       .icon-close {
         width: 91px;
       }
     }
 
-    .wrapper-logo {
-      margin-bottom: 3.6vh;
-
-      .image-logo-square {
-      }
-    }
-
     .list {
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
 
       a {
         color: white;
         font-size: $font-size-large;
-        margin-top: 9.0vh;
+        margin-bottom: 9.0vh;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }

@@ -3,6 +3,7 @@ mixin template(lang)
     - const en = lang === 'en'
     head
       title=title
+      meta(charset='utf-8')
       meta(name='description', content=description)
       meta(name='author', content=author)
       meta(property='og:title', content=title)
