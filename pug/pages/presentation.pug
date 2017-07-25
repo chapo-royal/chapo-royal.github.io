@@ -1,5 +1,5 @@
 .page.page-frame#presentation
-  .frame
+  .frame.desktop
     .panel-presentation
       .title PRESENTATION
       .content
@@ -12,4 +12,21 @@
       .letter(style='background-image: url(/img/presentation/letters/3.jpg)')
     include ../overlays/image-logo
     include ../overlays/icon-menu
+  .frame.mobile
+    .container-indicators
+      .line
+      a.indicator.active(href='#')
+      a.indicator(href='#')
+      a.indicator(href='#')
+      a.indicator(href='#')
+    .title PRESENTATION
+    .container-slides
+      .slide.active
+        .content
+          p "Cocaine is a hell of a drug," said Rick James.
+          p Today, we present you with a monothematic newsletter about a drug that has affected ties between the United States and Colombia, at least since the late 1970s. We have a look at the increase in cocaine seized in the United States and the possible reason behind this development.
+        .from CHAPOROYAL<br>LYON
+      .slide(style='background-image: url(/img/presentation/letters/1.jpg)')
+      .slide(style='background-image: url(/img/presentation/letters/2.jpg)')
+      .slide(style='background-image: url(/img/presentation/letters/3.jpg)')
   include ../overlays/labels

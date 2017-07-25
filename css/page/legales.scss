@@ -1,0 +1,42 @@
+&#legales {
+  .frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DEDEDE;
+    color: white;
+
+    .content {
+      width: 100%;
+      max-width: 58rem;
+      padding: 2rem 6rem 6rem;
+      box-sizing: border-box;
+      background-color: $color-theme;
+      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .wrapper-logo {
+        position: static;
+        margin: 0 0 2rem 0;
+
+        .image-logo-square {
+          width: 46px;
+        }
+      }
+
+      .title {
+        margin-bottom: 1rem;
+        font-size: $font-size-small;
+      }
+
+      pre {
+        align-self: stretch;
+        font-size: .65em;
+        line-height: $line-height-large;
+        white-space: pre-wrap;
+      }
+    }
+  }
+}

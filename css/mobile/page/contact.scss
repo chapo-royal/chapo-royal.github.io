@@ -1,0 +1,40 @@
+&#contact {
+  .frame {
+    overflow-y: scroll;
+
+    .panel-info {
+      flex: auto;
+      flex-shrink: 0;
+      padding: $height-nav-top 0 0;
+    }
+
+    .panel-contact {
+      flex-shrink: 0;
+      flex-direction: column;
+      padding: 1.5rem 2.5rem $height-nav-bottom;
+
+      .col {
+        flex: auto;
+        margin-right: 0;
+
+        > * {
+          margin-bottom: .8rem;
+        }
+
+        input {
+          padding: .4rem .5rem;
+        }
+
+        .fake {
+          display: none;
+        }
+
+        button {
+          align-self: center;
+          margin-bottom: 0;
+          padding: .3rem 2rem;
+        }
+      }
+    }
+  }
+}

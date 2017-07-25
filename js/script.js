@@ -3,7 +3,7 @@ $(document).ready(() => {
     const { hash } = window.location;
     const $page = $(hash);
     if (!$page.length) return;
-    $('#menu').removeClass('open');
+    $('.wrapper-menu, #menu').removeClass('open');
     $('.page').removeClass('active');
     $page.addClass('active');
   };
@@ -35,24 +35,37 @@ $(document).ready(() => {
     $letter.eq(letter_index).addClass('active');
   }, 5000);
 
+  const $presentation = $('#presentation');
+  const $indicator = $presentation.find('.indicator');
+  const $slide = $presentation.find('.slide');
+  $indicator.click(function () {
+    const index = $indicator.index($(this));
+    $indicator.removeClass('active');
+    $(this).addClass('active');
+    $slide.removeClass('active');
+    $slide.eq(index).addClass('active');
+  });
 
-  const $popup = $('#partenaires .popup');
-  $('.wrapper-map svg .land').mousemove(function (e) {
-    $('.wrapper-map svg .land').css('fill', '');
+
+  const $partenaires = $('#partenaires');
+  const $popup = $partenaires.find('.popup');
+  const $land = $partenaires.find('.land');
+  $land.mousemove(function (e) {
+    $land.css('fill', '');
     $(this).css('fill', '#D0021B');
 
     const title = $(this).attr('title');
     const id = $(this).attr('id');
-    $('#partenaires .description').text(`Description of ${title} (${id})`);
+    $partenaires.find('.description').text(`Description of ${title} (${id})`);
 
     const { clientX, clientY } = e;
     $popup.css({ top: clientY - $popup.outerHeight(), left: clientX });
     $('#label-city').text(title);
     $popup.addClass('active');
   });
-  $('.wrapper-map svg .land').mouseout(function (e) {
-    $('.wrapper-map svg .land').css('fill', '');
-    $('#partenaires .description').text('');
+  $land.mouseout(() => {
+    $land.css('fill', '');
+    $partenaires.find('.description').text('');
     $popup.removeClass('active');
   });
 });

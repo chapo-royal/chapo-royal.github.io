@@ -1,0 +1,98 @@
+.mobile {
+  @import './page/index';
+
+  .nav-top {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: $height-nav-top;
+    background: url(/img/mobile/background-top.svg) top;
+    background-size: 100% auto;
+
+    .wrapper-logo {
+      position: absolute;
+      bottom: 2vw;
+      left: 4vw;
+
+      .image-logo-mobile {
+        width: 45.9vw;
+      }
+    }
+
+    .wrapper-menu {
+      position: absolute;
+      top: 1vw;
+      right: 12.5vw;
+
+      .icon-menu {
+        width: 12.3vw;
+        height: 12.3vw;
+        background: url(/img/menu/icon-menu.svg) no-repeat center;
+        background-size: contain;
+      }
+
+      &.open {
+        .icon-menu {
+          background-image: url(/img/menu/icon-close.svg);
+        }
+      }
+    }
+  }
+
+  .nav-bottom {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: $height-nav-bottom;
+    background: url(/img/mobile/background-bottom.svg) bottom;
+    background-size: 100% auto;
+    pointer-events: none;
+
+    .wrapper-contact {
+      position: absolute;
+      bottom: 2.5vw;
+      left: 2vw;
+      pointer-events: auto;
+
+      .icon-contact {
+        width: 33vw;
+      }
+    }
+
+    .label-legal {
+      @include label;
+      right: 0;
+      padding: .2rem 1rem;
+      color: rgba(white, .55);
+      pointer-events: auto;
+    }
+  }
+
+  #menu {
+    top: 31vw;
+    bottom: 31vw;
+    max-width: none;
+    opacity: 0;
+    transition: visibility 1s, opacity 1s;
+
+    &.open {
+      max-width: none;
+      opacity: 1;
+    }
+
+    .container-content {
+      width: 100vw;
+      border-left: none;
+      justify-content: center;
+
+      .list {
+        flex: 1;
+        height: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.page {
+  @import './main';
+
+  &.page-frame {
+    padding: 0;
+    box-sizing: border-box;
+
+    @import './presentation';
+    @import './activites';
+    @import './partenaires';
+    @import './nos-ambitions';
+    @import './contact';
+    @import './paiement';
+    @import './legales';
+  }
+}

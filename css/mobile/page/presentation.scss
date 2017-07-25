@@ -1,0 +1,95 @@
+&#presentation {
+  background-color: white;
+
+  .frame {
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-top: calc(#{$height-nav-top} + 1rem);
+    box-sizing: border-box;
+    background-color: $color-theme-light;
+    padding-top: 1rem;
+
+    .container-indicators {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      width: 14rem;
+      margin-bottom: 1.5rem;
+
+      .line {
+        position: absolute;
+        top: 10.5px;
+        left: 12px;
+        right: 12px;
+        border: 1.5px solid white;
+      }
+
+      .indicator {
+        position: relative;
+        width: 24px;
+        height: 24px;
+        background-color: $color-theme-light;
+        border: 2px solid white;
+        border-radius: 24px;
+        box-sizing: border-box;
+
+        &.active {
+          background-color: white;
+        }
+      }
+    }
+
+    .title {
+      font-size: $font-size-large;
+    }
+
+    .container-slides {
+      position: relative;
+      align-self: stretch;
+      flex: 1;
+
+      .slide {
+        flex: 1;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-position: center;
+        background-size: cover;
+        padding: 1rem 2.5rem 0;
+        overflow-y: scroll;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 1s, opacity 1s;
+
+        &.active {
+          visibility: visible;
+          opacity: 1;
+        }
+
+        .content {
+          text-transform: uppercase;
+          font-weight: lighter;
+          line-height: $line-height-large;
+          text-align: justify;
+
+          p {
+            margin: 1.5rem 0;
+          }
+        }
+
+        .from {
+          line-height: $line-height-large;
+          font-size: $font-size-large;
+          margin-bottom: $height-nav-bottom;
+        }
+      }
+    }
+  }
+}

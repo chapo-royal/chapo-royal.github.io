@@ -1,5 +1,16 @@
+mixin panel-info
+  .info
+    | CHAPOROYAL<br>
+    | 3 cours Charlemagne<br>
+    | 69002 Lyon, France<br>
+    | <br>
+    | 33) 4 27 18 26 64<br>
+    | contact@chaporoyal.com<br>
+
 .page.page-frame#contact
   .frame
+    .panel-info.mobile
+      +panel-info
     form.panel-contact
       .col
         input(placeholder='DENOMINATION')
@@ -12,14 +23,8 @@
       .col
         .fake -
         button(type='submit') ENVOYER
-    .panel-info
-      .info
-        | CHAPOROYAL<br>
-        | 3 cours Charlemagne<br>
-        | 69002 Lyon, France<br>
-        | <br>
-        | 33) 4 27 18 26 64<br>
-        | contact@chaporoyal.com<br>
+    .panel-info.desktop
+      +panel-info
     include ../overlays/image-logo
     include ../overlays/icon-menu
   include ../overlays/labels

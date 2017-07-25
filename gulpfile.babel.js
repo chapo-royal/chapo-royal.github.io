@@ -29,7 +29,8 @@ const banner = [
 ].join('\n');
 
 // Build Directories
-const cssDir = path.join(__dirname, 'css', '**', '*.scss');
+const cssWatchDir = path.join(__dirname, 'css', '**', '*.scss');
+const cssSourceDir = path.join(__dirname, 'css', 'stylesheet.scss');
 const jsDir = path.join(__dirname, 'js', '**', '*.js');
 const pugWatchDir = path.join(__dirname, 'pug', '**', '*.pug');
 const pugSourceDir = path.join(__dirname, 'pug', '**', 'index.pug');
@@ -41,9 +42,9 @@ function onError(err) {
 
 // CSS
 gulp.task('build-css', () => {
-  gutil.log('\n\nBuild CSS Paths: \n', cssDir, '\n\n');
+  gutil.log('\n\nBuild CSS Paths: \n', cssSourceDir, '\n\n');
 
-  return gulp.src(cssDir)
+  return gulp.src(cssSourceDir)
     .pipe(autoprefixer('last 2 versions', 'ie 10', 'ie 11'))
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(header(banner, { pkg }))
@@ -108,7 +109,7 @@ gulp.task('connect', function () {
 
 // Watch
 gulp.task('watch', function () {
-  gulp.watch(cssDir, ['build-css']);
+  gulp.watch(cssWatchDir, ['build-css']);
   gulp.watch(jsDir, ['build-js']);
   gulp.watch(pugWatchDir, ['build-pug']);
 });

@@ -1,0 +1,149 @@
+&#nos-ambitions {
+  .frame {
+    background-color: black;
+
+    input {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      margin: 0;
+
+      &:checked {
+        & + .triangle {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      &:focus ~ .triangle .wrapper-years .container-years {
+        @include focus;
+      }
+    }
+
+    .triangle {
+      position: absolute;
+      top: -$padding-frame;
+      bottom: -$padding-frame;
+      left: -$padding-frame;
+      right: -$padding-frame;
+      color: white;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 1s, opacity 1s;
+
+      .background {
+        position: absolute;
+        top: $padding-frame;
+        bottom: $padding-frame;
+        left: $padding-frame;
+        right: $padding-frame;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .shape {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+      }
+
+      .wrapper-years {
+        position: absolute;
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+
+        .container-years {
+          display: flex;
+          align-items: flex-start;
+
+          .previous,
+          .next {
+            font-size: 1.2em;
+            font-weight: lighter;
+            text-decoration: underline;
+            cursor: pointer;
+
+            &:before,
+            &:after {
+              content: '\00a0\00a0\00a0\00a0'
+            }
+          }
+
+          .current {
+            font-size: 1.8em;
+            margin: 0 .3rem;
+          }
+        }
+      }
+
+      .description {
+        position: absolute;
+        width: 60vw;
+        height: 40vh;
+        box-sizing: border-box;
+        display: flex;
+
+        .title {
+        }
+
+        .content {
+          line-height: $line-height-large;
+          text-align: justify;
+          overflow: hidden;
+        }
+      }
+
+      &.left {
+        .shape {
+          border-width: 100vh 0 0 100vw;
+          border-color: transparent transparent transparent rgba(black, .5);
+        }
+
+        .wrapper-years {
+          top: 50vh;
+          left: 0;
+        }
+
+        .description {
+          left: 0;
+          bottom: 0;
+          padding: 2rem 2rem 6rem 6rem;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-end;
+
+          .title {
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+
+      &.right {
+        .shape {
+          border-width: 0 100vw 100vh 0;
+          border-color: transparent rgba(black, .5) transparent transparent;
+        }
+
+        .wrapper-years {
+          bottom: 50vh;
+          right: 0;
+        }
+
+        .description {
+          right: 0;
+          top: 0;
+          padding: 6rem 6rem 2rem 2rem;
+          flex-direction: column-reverse;
+          align-items: flex-end;
+          justify-content: flex-start;
+
+          .title {
+            margin-top: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

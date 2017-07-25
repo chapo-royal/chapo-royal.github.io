@@ -1,0 +1,156 @@
+&#partenaires {
+  .frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 2rem;
+    box-sizing: border-box;
+
+    input {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      margin: 0;
+    }
+
+    #partner-china {
+      &:checked {
+        & ~ .container-nations .china {
+          color: $color-theme;
+        }
+        & ~ .container-maps .china {
+          display: flex;
+        }
+      }
+      &:focus ~ .container-nations .china {
+        @include focus;
+      }
+    }
+
+    #partner-japan {
+      &:checked {
+        & ~ .container-nations .japan {
+          color: $color-theme;
+        }
+        & ~ .container-maps .japan {
+          display: flex;
+        }
+      }
+      &:focus ~ .container-nations .japan {
+        @include focus;
+      }
+    }
+
+    #partner-korea {
+      &:checked {
+        & ~ .container-nations .korea {
+          color: $color-theme;
+        }
+        & ~ .container-maps .korea {
+          display: flex;
+        }
+      }
+      &:focus ~ .container-nations .korea {
+        @include focus;
+      }
+    }
+
+    .container-nations {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+
+      .nation {
+        position: relative;
+        font-size: $font-size-largest;
+        font-weight: bold;
+        color: #FFCFD5;
+        letter-spacing: $letter-spacing-large;
+        cursor: pointer;
+      }
+    }
+
+    .container-maps {
+      align-self: stretch;
+      margin-bottom: 2rem;
+
+      .wrapper-map {
+        display: none;
+
+        svg {
+          height: 100%;
+
+          .land {
+            cursor: pointer;
+            fill: #9B9B9B;
+            stroke-width: 1.5;
+            stroke-linejoin: round;
+            transition: fill .3s;
+          }
+        }
+
+        &.china {
+          height: 60vh;
+          margin-top: -10vh;
+        }
+
+        &.japan {
+          height: 60vh;
+          margin-top: -10vh;
+        }
+
+        &.korea {
+          height: 50vh;
+        }
+      }
+    }
+
+    .description {
+      height: 1rem;
+      font-weight: bold;
+      font-size: $font-size-large;
+      color: $color-theme;
+      line-height: $line-height-large;
+      max-width: 30rem;
+      text-align: center;
+    }
+  }
+
+  .popup {
+    position: absolute;
+    pointer-events: none;
+    padding-left: 0.6rem;
+    padding-bottom: 1.2rem;
+    background: url(/img/partenaires/deco-popup-arrow.svg) no-repeat left bottom;
+    visibility: hidden;
+
+    &.active {
+      visibility: visible;
+    }
+
+    .container-image {
+      position: relative;
+
+      #image-city {
+        height: 20vh;
+      }
+
+      #label-city {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-weight: bold;
+        font-size: $font-size-large;
+        color: white;
+        letter-spacing: $letter-spacing-large;
+        text-transform: uppercase;
+        padding: .5rem;
+      }
+    }
+  }
+}

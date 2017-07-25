@@ -1,0 +1,68 @@
+&#activites {
+  background-color: $color-theme-light;
+  background-position: center;
+  background-size: cover;
+
+  .frame {
+    padding-top: $height-nav-top;
+    background-color: rgba($color-theme-light, .63);
+    overflow-y: scroll;
+
+    .panel-explanation {
+      flex: 1;
+      flex-shrink: 0;
+      justify-content: flex-start;
+      background: none;
+      padding: 0;
+
+      .container-content {
+        flex-shrink: 0;
+        background: none;
+        padding: 1.5rem 2.5rem $height-nav-bottom;
+
+        #activity-1 {
+          &:checked ~ .labels :nth-child(1) {
+            display: none;
+          }
+          &:checked ~ .labels :nth-child(2) {
+            color: white;
+          }
+          &:focus ~ .labels :nth-child(1) {
+            @include focus;
+          }
+        }
+
+        #activity-2 {
+          &:checked ~ .labels :nth-child(1) {
+            color: white;
+          }
+          &:checked ~ .labels :nth-child(2) {
+            display: none;
+          }
+          &:focus ~ .labels :nth-child(2) {
+            @include focus;
+          }
+        }
+
+        .divider {
+          align-self: center;
+          width: 10rem;
+          border: 1px solid white;
+          margin-top: -.5rem;
+          margin-bottom: .5rem;
+        }
+
+        .group {
+          color: white;
+        }
+
+        .labels {
+          label {
+            margin: 0;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

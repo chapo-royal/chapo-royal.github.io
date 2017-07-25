@@ -1,0 +1,102 @@
+&#paiement {
+  .frame {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding: 0 8rem;
+    box-sizing: border-box;
+    color: white;
+
+    .label-contact {
+      text-decoration: underline;
+      font-size: $font-size-large;
+    }
+
+    > .label-contact {
+      align-self: center;
+      margin-top: 3rem;
+      height: 0;
+    }
+
+    .container-boxes {
+      display: flex;
+      justify-content: center;
+
+      .box {
+        position: relative;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 3px solid white;
+        padding: 5rem 2rem;
+        margin-right: .5rem;
+        min-width: 20rem;
+        max-width: 30rem;
+
+        .label-personalize {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          font-size: $font-size-small;
+          color: #A0A4B8;
+          font-weight: lighter;
+          padding: .5rem 2rem;
+          text-align: right;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .title {
+          text-decoration: underline;
+          margin-bottom: 4rem;
+        }
+
+        .subtitle {
+          margin-top: -4rem;
+          margin-bottom: 4rem;
+          font-size: .9rem;
+          height: 0;
+        }
+
+        &.left {
+          form {
+            align-self: stretch;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            font-size: .9rem;
+            margin-bottom: 2rem;
+
+            .name {
+              flex-basis: 50%;
+            }
+
+            .price {
+              flex-basis: 20%;
+
+              &:after {
+                content: ' $';
+              }
+            }
+
+            .button {
+              flex-basis: 30%;
+              height: 30px;
+            }
+          }
+        }
+
+        &.right {
+          .label-demande {
+            margin-top: 1rem;
+            margin-bottom: 4.5rem;
+          }
+        }
+      }
+    }
+  }
+}

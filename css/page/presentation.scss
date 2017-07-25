@@ -1,0 +1,62 @@
+&#presentation {
+  .frame {
+    display: flex;
+    align-items: stretch;
+
+    .panel-presentation {
+      flex-basis: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      padding: 4rem (4rem + $padding-frame) 4rem 4rem;
+      box-sizing: border-box;
+
+      .title {
+        font-size: $font-size-large;
+        margin-bottom: 1.25rem;
+      }
+
+      .content {
+        font-weight: lighter;
+        line-height: 2.45em;
+        text-align: justify;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+
+        p {
+          margin: 3rem 0;
+        }
+      }
+
+      .from {
+        align-self: flex-start;
+        line-height: $line-height-large;
+        font-size: $font-size-large;
+      }
+    }
+
+    .panel-letters {
+      flex-basis: 50%;
+      position: relative;
+      background-color: white;
+
+      .letter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white no-repeat center;
+        background-size: contain;
+        opacity: 0;
+        transition: opacity 1s;
+
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

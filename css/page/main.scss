@@ -1,0 +1,67 @@
+&#main {
+  background: url(/img/main/background.png) repeat-x left bottom;
+  background-size: auto 80vh;
+  animation: anim-bg-flow 60s linear infinite;
+
+  @keyframes anim-bg-flow {
+    from {
+      background-position-x: 0;
+    }
+    to {
+      background-position-x: -264.1813602vh;
+    }
+  }
+
+  .container-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40vw;
+    height: 11.3vw;
+    margin-top: -0.1vw;
+    background-image: url(/img/main/container-menu.svg);
+    background-size: 100% 100%;
+
+    .wrapper-menu {
+      position: absolute;
+      top: 1.9vw;
+      right: 8.0vw;
+
+      .icon-menu {
+        width: 4.6vw;
+      }
+    }
+  }
+
+  .container-contact {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 36.4vw;
+    height: 10.3vw;
+    margin-bottom: -0.1vw;
+    background-image: url(/img/main/container-contact.svg);
+    background-size: 100% 100%;
+
+    .wrapper-contact {
+      position: absolute;
+      bottom: 0.7vw;
+      left: 5.3vw;
+
+      .icon-contact {
+        width: 9.0vw;
+      }
+    }
+  }
+
+  .image-logo-rect {
+    position: absolute;
+    top: 5.6vw;
+    left: 9.7vw;
+    width: 16.5vw;
+  }
+
+  .label-legal {
+    display: none;
+  }
+}

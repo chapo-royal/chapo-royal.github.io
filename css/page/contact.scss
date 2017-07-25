@@ -1,0 +1,74 @@
+&#contact {
+  .frame {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    .panel-contact {
+      display: flex;
+      align-items: stretch;
+      background-color: #82A8D2;
+      padding: 2.6rem;
+      padding-left: 10rem;
+
+      .col {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        margin-right: 1.5rem;
+
+        &:last-child {
+          flex: 0;
+          margin-right: 0;
+        }
+
+        > * {
+          margin-bottom: 1.5rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        input,
+        .fake {
+          background: $color-mercury;
+          border: 2px solid $color-highlight;
+          font-size: $font-size-normal;
+          padding: .8rem .5rem;
+        }
+
+        .fake {
+          visibility: hidden;
+        }
+
+        button {
+          flex: 1;
+          background: $color-highlight;
+          border: 3px solid $color-mercury;
+          font-size: $font-size-large;
+          color: $color-mercury;
+          cursor: pointer;
+          padding: 0 .5rem;
+        }
+      }
+    }
+
+    .panel-info {
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      background: url(/img/contact/background.jpg) center;
+      background-size: cover;
+      padding: 4rem;
+
+      .info {
+        font-weight: lighter;
+        font-size: $font-size-large;
+        line-height: $line-height-large;
+        text-align: right;
+      }
+    }
+  }
+}

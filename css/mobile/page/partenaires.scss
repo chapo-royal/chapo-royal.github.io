@@ -1,0 +1,82 @@
+&#partenaires {
+  background-color: white;
+
+  .frame {
+    padding: 4rem 2.5rem;
+    margin-top: $height-nav-top;
+    background-color: $color-theme-light;
+    justify-content: flex-start;
+
+    .container-nations {
+      position: absolute;
+      z-index: 2;
+      bottom: $height-nav-bottom;
+      left: 0;
+      right: 0;
+    }
+
+    .container-maps {
+      position: absolute;
+      bottom: $height-nav-bottom;
+      margin-bottom: 0;
+      left: 1rem;
+      right: 1rem;
+      z-index: 1;
+
+      .wrapper-map {
+        justify-content: center;
+
+        svg {
+          width: auto;
+          pointer-events: none;
+
+          .land {
+            stroke: none;
+          }
+        }
+
+        &.china {
+          height: 40vh;
+          margin-top: -10vh;
+        }
+
+        &.japan {
+          height: 50vh;
+          margin-bottom: -10vh;
+        }
+
+        &.korea {
+          height: 40vh;
+        }
+      }
+    }
+
+    .description {
+      position: relative;
+      z-index: 1;
+      color: white;
+      font-weight: lighter;
+    }
+  }
+
+  .popup {
+    visibility: visible;
+    padding: 0;
+    top: auto !important;
+    left: 0 !important;
+    bottom: 0;
+    background: none;
+    z-index: 0;
+
+    .container-image {
+      #image-city {
+        height: auto;
+        width: 100vw;
+      }
+
+      #label-city {
+        display: none;
+      }
+    }
+  }
+}
