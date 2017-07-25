@@ -1,15 +1,32 @@
 &#main {
-  background: url(/img/main/background.png) repeat-x left bottom;
-  background-size: auto 80vh;
-  animation: anim-bg-flow 60s linear infinite;
+  .background {
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 100vh;
+    height: 100vw;
+    background: repeat-y top left;
+    background-size: 80vh;
+    animation: anim-bg-flow 60s linear infinite;
 
-  @keyframes anim-bg-flow {
-    from {
-      background-position-x: 0;
+    @keyframes anim-bg-flow {
+      from {
+        background-position-y: 0;
+      }
+      to {
+        background-position-y: -264.1813602vh;
+      }
     }
-    to {
-      background-position-x: -264.1813602vh;
+
+    body.desktop &,
+    body.mobile & {
+      background-image: url(/img/main/background.jpg);
+      // load after other images begin loading
     }
+
+    transform-origin: top left;
+    transform: rotate(-90deg);
+    // load image horizontally
   }
 
   .container-menu {

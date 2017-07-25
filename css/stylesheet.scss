@@ -87,8 +87,8 @@ img, label {
   font-weight: lighter;
 }
 
-.desktop .mobile,
-.mobile .desktop {
+body.desktop .mobile,
+body.mobile .desktop {
   display: none !important;
 }
 
