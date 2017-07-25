@@ -1,0 +1,40 @@
+#menu {
+  top: 31vw;
+  bottom: 31vw;
+  max-width: none;
+  opacity: 0;
+  transition: visibility 1s, opacity 1s;
+
+  &.open {
+    max-width: none;
+    opacity: 1;
+  }
+
+  .container-content {
+    width: 100vw;
+    border-left: none;
+    justify-content: center;
+
+    .container-top {
+      .container-langs {
+        position: absolute;
+        flex-direction: column;
+        top: .5rem;
+        right: 0;
+
+        .lang {
+          background-color: white;
+          color: $color-theme;
+          padding: .5rem;
+          margin-bottom: 1rem;
+          margin-right: 0;
+        }
+      }
+    }
+
+    .list {
+      flex: 1;
+      height: auto;
+    }
+  }
+}

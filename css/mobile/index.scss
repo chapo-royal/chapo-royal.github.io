@@ -72,27 +72,5 @@
     }
   }
 
-  #menu {
-    top: 31vw;
-    bottom: 31vw;
-    max-width: none;
-    opacity: 0;
-    transition: visibility 1s, opacity 1s;
-
-    &.open {
-      max-width: none;
-      opacity: 1;
-    }
-
-    .container-content {
-      width: 100vw;
-      border-left: none;
-      justify-content: center;
-
-      .list {
-        flex: 1;
-        height: auto;
-      }
-    }
-  }
+  @import './menu';
 }
