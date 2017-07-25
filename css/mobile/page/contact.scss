@@ -6,12 +6,21 @@
       flex: auto;
       flex-shrink: 0;
       padding: $height-nav-top 0 0;
+      background: none;
+      background-color: #82A8D2;
+      align-items: flex-end;
+
+      .info {
+        padding: .5rem 1rem;
+      }
     }
 
     .panel-contact {
       flex-shrink: 0;
       flex-direction: column;
       padding: 1.5rem 2.5rem $height-nav-bottom;
+      background: url(/img/contact/background.jpg) center;
+      background-size: cover;
 
       .col {
         flex: auto;
