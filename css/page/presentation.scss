@@ -2,6 +2,7 @@
   .frame {
     display: flex;
     align-items: stretch;
+    color: white;
 
     .panel-presentation {
       flex-basis: 50%;
@@ -22,7 +23,6 @@
           flex-shrink: 0;
           font-size: $font-size-large;
           margin-bottom: 1.25rem;
-          color: white;
         }
 
         .content {
@@ -34,7 +34,6 @@
 
           p {
             margin: 3rem 0;
-            color: white;
           }
         }
       }
@@ -44,7 +43,6 @@
         line-height: $line-height-large;
         font-size: $font-size-large;
         margin-bottom: 3rem;
-        color: white;
       }
     }
 
