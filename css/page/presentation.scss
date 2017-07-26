@@ -9,7 +9,6 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      color: white;
       box-sizing: border-box;
       overflow-y: scroll;
 
@@ -23,6 +22,7 @@
           flex-shrink: 0;
           font-size: $font-size-large;
           margin-bottom: 1.25rem;
+          color: white;
         }
 
         .content {
@@ -34,6 +34,7 @@
 
           p {
             margin: 3rem 0;
+            color: white;
           }
         }
       }
@@ -43,6 +44,7 @@
         line-height: $line-height-large;
         font-size: $font-size-large;
         margin-bottom: 3rem;
+        color: white;
       }
     }
 

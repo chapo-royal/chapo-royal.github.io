@@ -1,5 +1,5 @@
 mixin template(lang)
-  html
+  html(lang=lang)
     - const fr = lang === 'fr'
     head
       title=title
@@ -9,8 +9,9 @@ mixin template(lang)
       meta(property='og:image', content='/screenshot.png')
       meta(property='og:description', content=description)
       meta(http-equiv='x-ua-compatible', content='ie=edge')
-      meta(name='viewport' content='width=device-width, user-scalable=no')
+      meta(name='viewport' content='width=device-width')
       meta(name='theme-color', content='#7E1421')
+      link(rel='manifest', href='/manifest.json')
       link(rel='stylesheet', href='/stylesheet.css')
       script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
       script(type='text/javascript', src='/script.js')
