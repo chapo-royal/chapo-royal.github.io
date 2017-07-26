@@ -9,7 +9,7 @@
     .content {
       width: 100%;
       max-width: 58rem;
-      padding: 2rem 6rem 6rem;
+      padding: 2rem 6rem 0;
       box-sizing: border-box;
       background-color: $color-theme;
       overflow-y: scroll;
@@ -36,6 +36,7 @@
         font-size: .65em;
         line-height: $line-height-large;
         white-space: pre-wrap;
+        padding-bottom: 6rem;
       }
     }
   }
