@@ -59,6 +59,7 @@
         .content {
           flex-shrink: 0;
           padding-bottom: $height-nav-bottom;
+          overflow-y: visible;
         }
       }
     }

@@ -10,23 +10,31 @@
       align-items: center;
       justify-content: center;
       color: white;
-      padding: 4rem (4rem + $padding-frame) 4rem 4rem;
       box-sizing: border-box;
+      overflow-y: scroll;
 
-      .title {
-        font-size: $font-size-large;
-        margin-bottom: 1.25rem;
-      }
+      .container-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem (3rem + $padding-frame) 0 3rem;
 
-      .content {
-        font-weight: lighter;
-        line-height: 2.45em;
-        text-align: justify;
-        text-transform: uppercase;
-        margin-bottom: 3rem;
+        .title {
+          flex-shrink: 0;
+          font-size: $font-size-large;
+          margin-bottom: 1.25rem;
+        }
 
-        p {
-          margin: 3rem 0;
+        .content {
+          font-weight: lighter;
+          line-height: 2.45em;
+          text-align: justify;
+          text-transform: uppercase;
+          margin-bottom: 3rem;
+
+          p {
+            margin: 3rem 0;
+          }
         }
       }
 
@@ -34,6 +42,7 @@
         align-self: flex-start;
         line-height: $line-height-large;
         font-size: $font-size-large;
+        margin-bottom: 3rem;
       }
     }
 

@@ -22,7 +22,6 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    justify-content: space-between;
     background: $color-theme url(/img/menu/background.svg) no-repeat bottom;
     background-size: 100% auto;
     box-sizing: border-box;
@@ -52,11 +51,11 @@
     }
 
     .list {
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      height: 70vh;
 
       a {
         font-size: $font-size-large;

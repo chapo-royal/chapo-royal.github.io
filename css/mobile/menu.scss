@@ -1,6 +1,6 @@
 #menu {
-  top: 31vw;
-  bottom: 31vw;
+  top: calc(#{$height-nav-top} + 1rem);
+  bottom: $height-nav-bottom;
   max-width: none;
   opacity: 0;
   transition: visibility 1s, opacity 1s;
@@ -14,6 +14,8 @@
     width: 100vw;
     border-left: none;
     justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
 
     .container-top {
       .container-langs {
@@ -33,8 +35,7 @@
     }
 
     .list {
-      flex: 1;
-      height: auto;
+      justify-content: space-around;
     }
   }
 }

@@ -12,7 +12,7 @@ $(document).ready(() => {
 
   const onResize = () => {
     const { clientWidth } = document.body;
-    const desktop = clientWidth > 960;
+    const desktop = clientWidth > 768;
     const mobile = !desktop;
     $('body').toggleClass('desktop', desktop);
     $('body').toggleClass('mobile', mobile);

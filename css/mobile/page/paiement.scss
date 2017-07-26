@@ -4,11 +4,13 @@
     justify-content: flex-start;
     padding: $height-nav-top 0 0;
     overflow-y: scroll;
+    align-items: stretch;
 
     .container-boxes {
       flex-shrink: 0;
       padding-top: 1rem;
       padding-bottom: $height-nav-bottom;
+      width: auto;
 
       .box {
         background-color: $color-theme;

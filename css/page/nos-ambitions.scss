@@ -91,7 +91,7 @@
         .content {
           line-height: $line-height-large;
           text-align: justify;
-          overflow: hidden;
+          overflow-y: scroll;
         }
       }
 

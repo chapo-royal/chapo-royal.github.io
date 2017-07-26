@@ -2,7 +2,7 @@
   .frame {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     justify-content: center;
     padding: 0 8rem;
     box-sizing: border-box;
@@ -22,6 +22,7 @@
     .container-boxes {
       display: flex;
       justify-content: center;
+      width: 0;
 
       .box {
         position: relative;
