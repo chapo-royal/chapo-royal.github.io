@@ -31,11 +31,16 @@
         }
 
         input,
+        textarea,
         .fake {
           background: $color-mercury;
           border: 2px solid $color-highlight;
           font-size: $font-size-normal;
           padding: .8rem .5rem;
+        }
+
+        textarea {
+          flex: 1;
         }
 
         .fake {
@@ -59,9 +64,9 @@
       display: flex;
       align-items: flex-start;
       justify-content: flex-end;
-      background: url(/img/contact/background.jpg) center;
+      background: url(/img/contact/background.jpg) top center;
       background-size: cover;
-      padding: 4rem;
+      padding: 3rem;
 
       .info {
         font-weight: lighter;

@@ -11,20 +11,25 @@ mixin panel-info
   .frame
     .panel-info.mobile
       +panel-info
-    form.panel-contact
+    form.panel-contact#form-contact(method='POST', action='https://prendssoin.com/api/chaporoyal/contact')
       .col
-        input(placeholder='DENOMINATION')
-        input(placeholder='PRENOM')
-        input(placeholder='NOM')
+        input(name='denomination', placeholder='DENOMINATION')
+        input(name='prenom', placeholder='PRÉNOM')
+        input(name='nom', placeholder='NOM')
+        input(name='activite', placeholder='ACTIVITE')
       .col
-        input(placeholder='ACTIVITE')
-        input(placeholder='COURRIEL')
-        input(placeholder='NUMERO DE TELEPHONE')
+        input(name='courriel', placeholder='COURRIEL')
+        input(name='telephone', placeholder='NUMERO DE TELEPHONE')
+        textarea(name='memo', placeholder='MEMO')
       .col
         .fake -
         button(type='submit') ENVOYER
+        .fake -
     .panel-info.desktop
       +panel-info
     include ../overlays/image-logo
     include ../overlays/icon-menu
   include ../overlays/labels
+  .overlay#contact-done
+    .label-message Nous vous remercions de votre intérêt. Nous vous répondrons dans les meilleurs délais.
+    a.label-link(href='#main') Retourner à la page d’accueil

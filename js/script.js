@@ -1,17 +1,22 @@
 $(document).ready(() => {
   $(document).on('click', 'a', function (e) {
-      const href = $(this).attr('href');
-      if(href === '#') e.preventDefault();
+    const href = $(this).attr('href');
+    if (href === '#') e.preventDefault();
   });
 
   const handleHashChange = () => {
     const { hash } = window.location;
     if (hash === '' || hash === '#') return;
-    const $page = $(hash);
+    const [hash_page, has_overlay] = hash.split('-');
+    const $page = $(hash_page);
     if (!$page.length) return;
     $('.wrapper-menu, #menu').removeClass('open');
     $('.page').removeClass('active');
     $page.addClass('active');
+    $('.overlay').removeClass('active');
+    if (has_overlay) {
+      $(hash).addClass('active');
+    }
   };
   handleHashChange();
   $(window).on('hashchange', handleHashChange);
@@ -26,11 +31,9 @@ $(document).ready(() => {
   onResize();
   window.onresize = onResize;
 
-
   $('.wrapper-menu').click(() => {
     $('.wrapper-menu, #menu').toggleClass('open');
   });
-
 
   let letter_index = 0;
   window.setInterval(() => {
@@ -73,5 +76,17 @@ $(document).ready(() => {
     $land.css('fill', '');
     $partenaires.find('.description').text('');
     $popup.removeClass('active');
+  });
+
+  $('#form-contact').submit(function (e) {
+    e.preventDefault();
+    const type = $(this).attr('method');
+    const url = $(this).attr('action');
+    const data = $(this).serialize();
+    $.ajax({ type, url, data }).done((res) => {
+      window.location.hash = '#contact-done'
+    }).fail((data) => {
+      console.error(data);
+    });
   });
 });
