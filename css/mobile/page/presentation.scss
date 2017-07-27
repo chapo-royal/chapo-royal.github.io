@@ -22,6 +22,7 @@
         left: 12px;
         right: 12px;
         border: 1.5px solid white;
+        background-color: white;
       }
 
       .indicator {
@@ -58,11 +59,11 @@
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
         background-position: center;
         background-size: cover;
         padding: 1rem 2.5rem 0;
-        overflow-y: scroll;
+        overflow-y: auto;
         visibility: hidden;
         opacity: 0;
         transition: visibility 1s, opacity 1s;

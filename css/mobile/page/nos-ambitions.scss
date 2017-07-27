@@ -39,6 +39,7 @@
       }
 
       .description {
+        align-self: stretch;
         position: relative;
         top: auto;
         bottom: auto;
@@ -48,9 +49,9 @@
         height: auto;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: flex-start;
+        text-align: left;
         padding: 1.5rem 2rem 0;
-        overflow-y: scroll;
+        overflow-y: auto;
 
         .title {
           margin: 0 0 1.5rem;

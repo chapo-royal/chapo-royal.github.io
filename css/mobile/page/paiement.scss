@@ -3,35 +3,39 @@
     background-color: $color-theme-light;
     justify-content: flex-start;
     padding: $height-nav-top 0 0;
-    overflow-y: scroll;
     align-items: stretch;
+    overflow-y: auto;
 
     .container-boxes {
-      flex-shrink: 0;
-      padding-top: 1rem;
-      padding-bottom: $height-nav-bottom;
+      display: block;
+      min-width: 0;
+      max-width: none;
       width: auto;
+      padding-top: 1rem;
+      flex-direction: column;
 
       .box {
         background-color: $color-theme;
         padding: 2rem 0;
+        margin-right: 0;
+        margin-bottom: $height-nav-bottom;
 
         &.left {
-          margin-right: 0;
           min-width: 0;
           max-width: none;
           border-left: none;
           border-right: none;
 
           form {
+            flex: 0 0 auto;
             flex-wrap: wrap;
             justify-content: center;
 
             .name {
-              flex-basis: 50%;
+              flex-basis: 60%;
             }
             .price {
-              flex-basis: 30%;
+              flex-basis: 40%;
             }
             .button {
               margin-top: 1.5rem;

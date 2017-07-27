@@ -4,9 +4,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 8rem;
     box-sizing: border-box;
     color: white;
+    overflow-x: hidden;
 
     .label-contact {
       text-decoration: underline;
@@ -21,20 +21,23 @@
 
     .container-boxes {
       display: flex;
-      justify-content: center;
-      width: 0;
+      min-width: 50rem;
+      max-width: 80rem;
+      width: 80vw;
 
       .box {
-        position: relative;
         flex: 1;
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         border: 3px solid white;
         padding: 5rem 2rem;
         margin-right: .5rem;
-        min-width: 20rem;
-        max-width: 30rem;
+
+        > * {
+          flex-shrink: 0;
+        }
 
         .label-personalize {
           position: absolute;
@@ -85,7 +88,6 @@
             }
 
             .button {
-              flex-basis: 30%;
               height: 30px;
             }
           }

@@ -1,6 +1,6 @@
 &#contact {
   .frame {
-    overflow-y: scroll;
+    overflow-y: auto;
 
     .panel-info {
       flex: auto;
@@ -27,6 +27,7 @@
         margin-right: 0;
 
         > * {
+          flex: 0 0 auto;
           margin-bottom: .8rem;
         }
 

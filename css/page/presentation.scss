@@ -8,12 +8,13 @@
       flex-basis: 50%;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: stretch;
       justify-content: center;
       box-sizing: border-box;
-      overflow-y: scroll;
+      overflow-y: auto;
 
       .container-content {
+        flex-shrink: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -26,6 +27,7 @@
         }
 
         .content {
+          align-self: stretch;
           font-weight: lighter;
           line-height: 2.45em;
           text-align: justify;

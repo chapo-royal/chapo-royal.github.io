@@ -84,6 +84,7 @@
         height: 40vh;
         box-sizing: border-box;
         display: flex;
+        align-items: stretch;
 
         .title {
         }
@@ -91,7 +92,7 @@
         .content {
           line-height: $line-height-large;
           text-align: justify;
-          overflow-y: scroll;
+          overflow-y: auto;
         }
       }
 
@@ -111,8 +112,8 @@
           bottom: 0;
           padding: 2rem 2rem 6rem 6rem;
           flex-direction: column;
-          align-items: flex-start;
           justify-content: flex-end;
+          text-align: left;
 
           .title {
             margin-bottom: 1.5rem;
@@ -136,8 +137,8 @@
           top: 0;
           padding: 6rem 6rem 2rem 2rem;
           flex-direction: column-reverse;
-          align-items: flex-end;
           justify-content: flex-start;
+          text-align: right;
 
           .title {
             margin-top: 1.5rem;
