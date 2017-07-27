@@ -13,11 +13,7 @@ mixin template(lang)
       meta(name='theme-color', content='#7E1421')
       link(rel='manifest', href='/manifest.json')
       link(rel='stylesheet', href='/stylesheet.css')
-      script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
-      script(type='text/javascript', src='/script.js')
-      script(type='text/javascript').
-        lang = '#{lang}';
-    body
+    body.desktop
       include ./pages/main
       include ./pages/presentation
       include ./pages/activites
@@ -28,3 +24,8 @@ mixin template(lang)
       include ./pages/legales
       include ./overlays/mobile
       include ./menu
+      script(src='https://code.jquery.com/jquery-3.2.1.min.js', integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+      script(type='text/javascript').
+        lang = '#{lang}';
+      script(type='text/javascript', src='/script.js')
+      script(type='text/javascript', scr='/lib/mtiFontTrackingCode.js')

@@ -25,26 +25,7 @@ body {
   position: fixed;
 }
 
-@font-face {
-  font-family: 'Avenir';
-  src: url(/fonts/AvenirBlack.otf) format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Avenir';
-  src: url(/fonts/AvenirLight.otf) format('opentype');
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Avenir';
-  src: url(/fonts/AvenirMedium.otf) format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
+@import './fonts';
 
 @mixin font {
   font-family: 'Avenir', serif;
