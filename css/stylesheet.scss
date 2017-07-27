@@ -55,6 +55,7 @@ a {
 
 input,
 textarea {
+  @include font;
   font-size: inherit;
 }
 
