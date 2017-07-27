@@ -37,6 +37,24 @@
           border: 2px solid $color-highlight;
           font-size: $font-size-normal;
           padding: .8rem .5rem;
+          transition: border-color .3s, color .3s;
+
+          &::placeholder {
+            transition: color .3s;
+          }
+
+          &.error {
+            color: red;
+            border-color: red;
+
+            &::placeholder {
+              color: red;
+            }
+
+            &:after {
+              content: '*obligatoire'
+            }
+          }
         }
 
         textarea {
@@ -55,6 +73,12 @@
           color: $color-mercury;
           cursor: pointer;
           padding: 0 .5rem;
+          transition: opacity .3s;
+
+          &:disabled {
+            cursor: auto;
+            opacity: .5;
+          }
         }
       }
     }

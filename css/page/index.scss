@@ -111,6 +111,7 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility 1s, opacity 1s;
+    padding: 3rem;
 
     &.active {
       visibility: visible;
@@ -118,9 +119,11 @@
     }
 
     .label-message {
+      text-align: center;
     }
 
     .label-link {
+      text-align: center;
       text-decoration: underline;
       margin-top: 2rem;
     }

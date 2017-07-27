@@ -78,15 +78,36 @@ $(document).ready(() => {
     $popup.removeClass('active');
   });
 
-  $('#form-contact').submit(function (e) {
+  const $form = $('#form-contact');
+  const $submit = $form.find('[type=submit]');
+  $form.submit(function (e) {
     e.preventDefault();
-    const type = $(this).attr('method');
-    const url = $(this).attr('action');
-    const data = $(this).serialize();
-    $.ajax({ type, url, data }).done((res) => {
-      window.location.hash = '#contact-done'
+    $submit.prop('disabled', true);
+    const type = $form.attr('method');
+    const url = $form.attr('action');
+    const data = $form.serialize();
+    $.ajax({ type, url, data }).done(() => {
+      $form[0].reset();
+      $form.find('input, textarea').removeClass('error');
+      $submit.prop('disabled', false);
+      window.location.hash = '#contact-done';
     }).fail((data) => {
-      console.error(data);
+      $submit.prop('disabled', false);
+      if (data.status === 500 && data.responseJSON) {
+        const { error } = data.responseJSON;
+        if (error.code === 32002) {
+          $form.find('input, textarea').removeClass('error');
+          error.fields.forEach((field) => {
+            $form.find(`[name=${field}]`).addClass('error');
+          });
+        } else {
+          console.error(error);
+          alert(error.msg);
+        }
+      } else {
+        console.error(data);
+        alert(data.statusText);
+      }
     });
   });
 });
