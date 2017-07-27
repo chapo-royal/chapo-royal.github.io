@@ -1,6 +1,12 @@
 $(document).ready(() => {
+  $(document).on('click', 'a', function (e) {
+      const href = $(this).attr('href');
+      if(href === '#') e.preventDefault();
+  });
+
   const handleHashChange = () => {
     const { hash } = window.location;
+    if (hash === '' || hash === '#') return;
     const $page = $(hash);
     if (!$page.length) return;
     $('.wrapper-menu, #menu').removeClass('open');
