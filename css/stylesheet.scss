@@ -53,11 +53,14 @@ a {
   color: inherit;
 }
 
-input {
+input,
+textarea {
+  @include font;
   font-size: inherit;
 }
 
-img, label {
+img,
+label {
   display: block;
 }
 
