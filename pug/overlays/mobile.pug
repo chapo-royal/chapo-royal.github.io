@@ -5,6 +5,6 @@
     .icon-menu(aria-label="menu")
 .nav-bottom.mobile
   a.wrapper-contact(href='#contact')
-    img.icon-contact(src='/img/mobile/icon-contact.svg', alt='contact')
+    img.icon-contact(src= fr ? '/img/mobile/icon-contact-fr.svg' : '/img/mobile/icon-contact-en.svg', alt='contact')
   a.label-legal(href='#legales')
     = fr ? 'Mentions légales' : 'Legal notice'
