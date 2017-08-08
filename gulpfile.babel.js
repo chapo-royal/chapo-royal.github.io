@@ -73,17 +73,17 @@ gulp.task('build-pug', () => {
     description: pkg.description,
     payments: [
       {
-        name: 'PME & ARTISANS',
+        name: ['PME & ARTISANS', 'SMEs & CRAFTSMEN'],
         price: 600,
         hosted_button_id: 'FQ4MM3T3XHT68'
       },
       {
-        name: 'MEMBRE INDIVIDUEL',
+        name: ['MEMBRE INDIVIDUEL', 'INDIVIDUAL MEMBER'],
         price: 980,
         hosted_button_id: 'U7ZAZCB6K6R5N'
       },
       {
-        name: 'ENTREPRISE',
+        name: ['ENTREPRISE', 'COMPANY'],
         price: 2400,
         hosted_button_id: 'VTL5LDTLCXMAW'
       }

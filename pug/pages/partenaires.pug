@@ -4,9 +4,12 @@
     input#partner-japan(type='radio', name='partners')
     input#partner-korea(type='radio', name='partners')
     .container-nations
-      label.nation.china(for='partner-china') CHINE
-      label.nation.japan(for='partner-japan') JAPON
-      label.nation.korea(for='partner-korea') COREE<br>DU SUD
+      label.nation.china(for='partner-china')
+        = fr ? 'CHINE' : 'CHINA'
+      label.nation.japan(for='partner-japan')
+        = fr ? 'JAPON' : 'JAPAN'
+      label.nation.korea(for='partner-korea')
+        != fr ? 'COREE<br>DU SUD' : 'SOUTH<br>KOREA'
     .container-maps
       .wrapper-map.china
         include ../../img/partenaires/maps/china.svg
@@ -15,11 +18,20 @@
       .wrapper-map.korea
         include ../../img/partenaires/maps/korea.svg
     .description.china
-      | Nous travaillons avec des partenaires en Chine, dit l'Empire du Milieu.
+      if fr
+        | Nous travaillons avec des partenaires en Chine, dit l'Empire du Milieu.
+      else
+        | We work with partners from China, the Middle Kingdom.
     .description.japan
-      | Nous travaillons avec des partenaires au Japon, dit le pays du Soleil Levant.
+      if fr
+        | Nous travaillons avec des partenaires au Japon, dit le pays du Soleil Levant.
+      else
+        | We work with partners from Japan, the Land of the Rising Sun.
     .description.korea
-      | Nous travaillons avec des partenaires en Corée du Sud, dit le pays du Matin calme.
+      if fr
+        | Nous travaillons avec des partenaires en Corée du Sud, dit le pays du Matin calme.
+      else
+        | We work with partners from South Korea, the Land of the Morning Calm.
     include ../overlays/label-partenariat
     include ../overlays/image-logo
     include ../overlays/icon-menu

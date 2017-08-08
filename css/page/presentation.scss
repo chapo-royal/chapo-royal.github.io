@@ -23,7 +23,7 @@
         .title {
           flex-shrink: 0;
           font-size: $font-size-large;
-          margin-bottom: 1.25rem;
+          margin-bottom: 1rem;
         }
 
         .content {
@@ -32,10 +32,10 @@
           line-height: 2.45em;
           text-align: justify;
           text-transform: uppercase;
-          margin-bottom: 3rem;
+          margin-bottom: 1rem;
 
           p {
-            margin: 3rem 0;
+            margin: 2rem 0;
           }
         }
       }

@@ -2,23 +2,31 @@
   .frame
     .container-boxes
       .box.left
-        .title DEMANDE DE PARTENARIAT
-        .subtitle (par etude)
+        .title
+          = fr ? 'DEMANDE DE PARTENARIAT' : 'REQUEST FOR PARTNERSHIP'
+        .subtitle
+          = fr ? '(par etude)' : '(price for each study)'
         each payment in payments
           form(action='https://www.paypal.com/cgi-bin/webscr', method='post', target='_top')
             input(type='hidden', name='cmd', value='_s-xclick')
             input(type='hidden', name='hosted_button_id', value=payment.hosted_button_id)
-            .name= payment.name
+            .name= payment.name[fr ? 0 : 1]
             .price= payment.price
             input.button(type='image', src='https://chapo-royal.github.io/img/paiement/button.svg', border='0', name='submit', alt='PayPal - The safer, easier way to pay online!')
             img(alt='', border='0', src='https://www.paypalobjects.com/en_US/i/scr/pixel.gif', width='1', height='1')
-        .label-personalize CONTACTEZ-NOUS POUR TOUT DEVIS PERSONNALISÉ
+        .label-personalize
+          = fr ? 'CONTACTEZ-NOUS POUR TOUT DEVIS PERSONNALISÉ' : 'CONTACT US FOR ANY CUSTOMIZED ESTIMATE'
       .box.right.desktop
-        .title DEMANDE D’ÉTUDES DE MARCHÉ
-        .label-demande DEMANDE DE DEVIS
-        .label-personalize CONTACTEZ-NOUS POUR TOUT DEVIS PERSONNALISÉ
-        a.label-contact(href='#contact') Contact us
-    a.label-contact.desktop(href='#contact') Contact us
+        .title
+          = fr ? 'DEMANDE D’ÉTUDES DE MARCHÉ' : 'REQUEST FOR MARKET STUDY'
+        .label-demande
+          = fr ? 'DEMANDE DE DEVIS' : 'ESTIMATE'
+        .label-personalize
+          = fr ? 'CONTACTEZ-NOUS POUR TOUT DEVIS PERSONNALISÉ' : 'CONTACT US FOR ANY CUSTOMIZED ESTIMATE'
+        a.label-contact(href='#contact')
+          = fr ? 'Contact' : 'Contact us'
+    a.label-contact.desktop(href='#contact')
+      = fr ? 'Contact' : 'Contact us'
     include ../overlays/image-logo
     include ../overlays/icon-menu
   include ../overlays/labels

@@ -11,7 +11,10 @@
           label.next(for='ambition-1880') 1880
       .description
         .content
-          | Aider les PME et les artisans qui peinent à trouver des partenaires fiables et sur le long-terme en Asie.
+          if fr
+            | Aider les PME et les artisans qui peinent à trouver des partenaires fiables et sur le long-terme en Asie.
+          else
+            | To help small and medium-sized enterprises (SMEs) and craftsmen who are struggling to find reliable and long-term partners in Asia.
     input#ambition-1880(type='radio', name='ambitions')
     .triangle.left
       .background(style='background-image: url(/img/nos_ambitions/backgrounds/2.jpg)')
@@ -23,7 +26,10 @@
           label.next(for='ambition-1980') 1980
       .description
         .content
-          | Avoir une relation durable avec nos partenaires français, nos partenaires étrangers et nos clients.
+          if fr
+            | Améliorer la relation existante entre les PME et artisans français et leurs partenaires en Asie.
+          else
+            | To improve the existing relationship between French small and medium-sized enterprises (SMEs) and artisans, and their partners in Asia.
     input#ambition-1980(type='radio', name='ambitions')
     .triangle.right
       .background(style='background-image: url(/img/nos_ambitions/backgrounds/3.jpg)')
@@ -35,8 +41,10 @@
           label.next(for='ambition-1780') 1780
       .description
         .content
-          | Améliorer la connaissance des entreprises asiatiques pour les produits français;
-          | Améliorer la relation existante entre les PME et artisans français et leurs partenaires en Asie.
+          if fr
+            | Améliorer la connaissance des entreprises asiatiques pour les produits français;
+          else
+            | To improve knowledge of Asian companies for French products.
     include ../overlays/image-logo
     include ../overlays/icon-menu
   include ../overlays/labels

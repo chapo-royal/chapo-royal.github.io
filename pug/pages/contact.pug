@@ -13,17 +13,18 @@ mixin panel-info
       +panel-info
     form.panel-contact#form-contact(method='POST', action='https://prendssoin.com/api/chaporoyal/contact')
       .col
-        input(name='denomination', placeholder='DENOMINATION')
-        input(name='prenom', placeholder='PRÉNOM')
-        input(name='nom', placeholder='NOM')
-        input(name='activite', placeholder='ACTIVITE')
+        input(name='denomination', placeholder= fr ? 'Dénomination' : 'Company name')
+        input(name='prenom', placeholder= fr ? 'Prénom' : 'First name')
+        input(name='nom', placeholder= fr ? 'Nom' : 'Family name')
+        input(name='activite', placeholder= fr ? 'Activité' : 'Activity')
       .col
-        input(name='courriel', placeholder='COURRIEL')
-        input(name='telephone', placeholder='NUMERO DE TELEPHONE')
-        textarea(name='memo', placeholder='MEMO')
+        input(name='courriel', placeholder= fr ? 'Courriel' : 'E-mail')
+        input(name='telephone', placeholder= fr ? 'Numéro de téléphone' : 'Telephone number')
+        textarea(name='memo', placeholder= fr ? 'Mémo' : 'Memo')
       .col
         .fake -
-        button(type='submit') ENVOYER
+        button(type='submit')
+          = fr ? 'ENVOYER' : 'SEND'
         .fake -
     .panel-info.desktop
       +panel-info

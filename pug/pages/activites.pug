@@ -4,20 +4,32 @@
       .container-content
         input#activity-1(type='radio', name='activites', checked)
         .group
-          .title Exportation made in France
+          .title
+            = fr ? 'Exportation made in France' : '"Made in France" exportation'
           .content
-            | Fort d’une équipe composée de membres experts en commerce international, ChapoRoyal a su développer un réseau de distribution en Asie orientale. Le processus d’exportation est établi par nos soins dans le cadre d’une collaboration.
-            | Nos partenaires commerciaux sont des boutiques situées dans les principaux centres commerciaux, ainsi que des showrooms exlusifs.
+            if fr
+              | Fort d’une équipe composée de membres experts en commerce international, ChapoRoyal a su développer un réseau de distribution en Asie orientale. Le processus d’exportation est établi par nos soins dans le cadre d’une collaboration.
+              | Nos partenaires commerciaux sont des boutiques situées dans les principaux centres commerciaux, ainsi que des showrooms exclusifs.
+            else
+              | ChapoRoyal and its team that is an expert in international trade, developed a distribution network in East Asia. The export process is established by us as part of a collaboration.
+              | Our business partners are boutiques located in main shopping malls, as well as exclusive showrooms.
         input#activity-2(type='radio', name='activites')
         .group
-          .title Études de marchés « sur mesure »
+          .title
+            = fr ? 'Études de marchés « sur mesure »' : '"Customized" market studies'
           .content
-            | Les produits doivent répondre à des critères garantissant l’authenticité et la qualité exigée par nos collaborateurs.
-            | Nos études de marché sont axées sur la France et ses régions; et ce, afin de nous assurer de la réelle fabrication française des produits. Notre objectif étant d’avoir une relation durable avec nos partenaires français et nos partenaires étrangers.
+            if fr
+              | Les produits doivent répondre à des critères garantissant l’authenticité et la qualité exigée par nos collaborateurs.
+              | Nos études de marché sont axées sur la France et ses régions; et ce, afin de nous assurer de la réelle fabrication française des produits. Notre objectif étant d’avoir une relation durable avec nos partenaires français et nos partenaires étrangers.
+            else
+              | The products we export must meet criteria that guarantee the authenticity and quality required by our partners.
+              | Our market studies focus on France and its regions, in order to ensure us that the products are truly made in France. Because our objective is to have a lasting relationship with our French partners and our foreign partners.
         .divider.mobile
         .labels
-          label(for='activity-1') Exportation made in France
-          label(for='activity-2') Études de marchés « sur mesure »
+          label(for='activity-1')
+            = fr ? 'Exportation made in France' : '"Made in France" exportation'
+          label(for='activity-2')
+            = fr ? 'Études de marchés « sur mesure »' : '"Customized" market studies'
     .panel-empty.desktop
     include ../overlays/label-partenariat
     include ../overlays/image-logo
