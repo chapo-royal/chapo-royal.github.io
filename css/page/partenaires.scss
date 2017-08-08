@@ -23,6 +23,9 @@
         & ~ .container-maps .china {
           display: flex;
         }
+        & ~ .description.china {
+          display: block;
+        }
       }
       &:focus ~ .container-nations .china {
         @include focus;
@@ -37,6 +40,9 @@
         & ~ .container-maps .japan {
           display: flex;
         }
+        & ~ .description.japan {
+          display: block;
+        }
       }
       &:focus ~ .container-nations .japan {
         @include focus;
@@ -50,6 +56,9 @@
         }
         & ~ .container-maps .korea {
           display: flex;
+        }
+        & ~ .description.korea {
+          display: block;
         }
       }
       &:focus ~ .container-nations .korea {
@@ -116,6 +125,7 @@
       line-height: $line-height-large;
       max-width: 30rem;
       text-align: center;
+      display: none;
     }
   }
 
@@ -135,7 +145,10 @@
       position: relative;
 
       #image-city {
+        background: rgba(black, .8) url(/img/partenaires/photos/CN-11.jpg) center;
+        background-size: cover;
         height: 20vh;
+        width: 32vh;
       }
 
       #label-city {

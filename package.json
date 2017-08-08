@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/chapo-royal/chapo-royal.github.io",
   "devDependencies": {
+    "async": "^2.5.0",
     "babel-core": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
     "extend": "^3.0.1",
@@ -28,6 +29,7 @@
     "gulp-pug": "^3.1.0",
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^3.0.0",
-    "gulp-util": "latest"
+    "gulp-util": "latest",
+    "sharp": "^0.18.2"
   }
 }

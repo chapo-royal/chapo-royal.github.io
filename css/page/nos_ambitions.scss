@@ -87,9 +87,6 @@
         align-items: stretch;
         justify-content: flex-start;
 
-        .title {
-        }
-
         .content {
           line-height: $line-height-large;
           text-align: justify;
@@ -114,10 +111,6 @@
           padding: 2rem 2rem 6rem 6rem;
           flex-direction: column;
           text-align: left;
-
-          .title {
-            margin-bottom: 1.5rem;
-          }
         }
       }
 
@@ -138,10 +131,6 @@
           padding: 6rem 6rem 2rem 2rem;
           flex-direction: column-reverse;
           text-align: right;
-
-          .title {
-            margin-top: 1.5rem;
-          }
         }
       }
     }

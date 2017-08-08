@@ -57,6 +57,13 @@ $(document).ready(() => {
 
 
   const $partenaires = $('#partenaires');
+  const $imageCity = $('#image-city');
+  const setImageCity = (id) => $imageCity.css('background-image', `url(/img/partenaires/photos/${id}.jpg)`);
+  $partenaires.find('.nation').click(function () {
+    if ($(this).hasClass('china')) setImageCity('CN-11');
+    if ($(this).hasClass('japan')) setImageCity('JP-13');
+    if ($(this).hasClass('korea')) setImageCity('KR-11');
+  });
   const $popup = $partenaires.find('.popup');
   const $land = $partenaires.find('.land');
   $land.mousemove(function (e) {
@@ -65,16 +72,15 @@ $(document).ready(() => {
 
     const title = $(this).attr('title');
     const id = $(this).attr('id');
-    $partenaires.find('.description').text(`Description of ${title} (${id})`);
 
     const { clientX, clientY } = e;
     $popup.css({ top: clientY - $popup.outerHeight(), left: clientX });
+    setImageCity(id);
     $('#label-city').text(title);
     $popup.addClass('active');
   });
   $land.mouseout(() => {
     $land.css('fill', '');
-    $partenaires.find('.description').text('');
     $popup.removeClass('active');
   });
 
