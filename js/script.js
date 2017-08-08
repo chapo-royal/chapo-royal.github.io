@@ -101,7 +101,7 @@ $(document).ready(() => {
       $submit.prop('disabled', false);
       if (data.status === 500 && data.responseJSON) {
         const { error } = data.responseJSON;
-        if (error.code === 32002) {
+        if (error.code === 31002) {
           $form.find('input, textarea').removeClass('error');
           error.fields.forEach((field) => {
             $form.find(`[name=${field}]`).addClass('error');
