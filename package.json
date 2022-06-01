@@ -30,6 +30,6 @@
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "latest",
-    "sharp": "^0.18.2"
+    "sharp": "^0.30.5"
   }
 }
